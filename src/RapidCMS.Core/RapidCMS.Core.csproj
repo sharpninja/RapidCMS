@@ -14,8 +14,8 @@
     <PackageTags>Blazor, CMS</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>2.1.6.5</AssemblyVersion>
-    <FileVersion>2.1.6.5</FileVersion>
+    <AssemblyVersion>2.1.8.7</AssemblyVersion>
+    <FileVersion>2.1.8.7</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

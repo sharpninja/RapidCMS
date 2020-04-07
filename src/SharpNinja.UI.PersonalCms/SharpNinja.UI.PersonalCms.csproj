@@ -6,8 +6,8 @@
     <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.0.5.5</AssemblyVersion>
-    <FileVersion>1.0.5.5</FileVersion>
+    <AssemblyVersion>1.0.11.11</AssemblyVersion>
+    <FileVersion>1.0.11.11</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

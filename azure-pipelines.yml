@@ -13,8 +13,9 @@ steps:
 - script: |
           mkdir $(System.DefaultWorkingDirectory)/linux
           dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
-          zip $(System.DefaultWorkingDirectory)/linux.zip $(System.DefaultWorkingDirectory)/linux/*
-          ls -al $(System.DefaultWorkingDirectory)/*.zip
+          cd $(System.DefaultWorkingDirectory)/linux
+          zip $(System.DefaultWorkingDirectory)/linux.zip *
+          ls -al $(System.DefaultWorkingDirectory)/linux.zip
   displayName: 'dotnet publish $(buildConfiguration)'
 
 - task: AzureRmWebAppDeployment@4

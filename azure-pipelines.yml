@@ -6,8 +6,6 @@
 trigger:
 - publish
 
-pool:
-
 variables:
   buildConfiguration: 'Debug'
 

@@ -17,15 +17,3 @@ steps:
           zip $(System.DefaultWorkingDirectory)/linux.zip *
           ls -al $(System.DefaultWorkingDirectory)/linux.zip
   displayName: 'dotnet publish $(buildConfiguration)'
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Body-And-Brain-Pay-As-You-Go(45098bff-52b9-40b4-b650-a58322e06a0c)'
-    appType: 'webAppLinux'
-    WebAppName: 'aprilbyrd'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/linux.zip'
-    RuntimeStack: 'DOTNETCORE|Latest'
-    StartupCommand: 'SharpNinja.UI.PersonalCms'
-#    ScriptType: 'Inline Script'
-#    InlineScript: ':: You can provide your deployment commands here. One command per line.'

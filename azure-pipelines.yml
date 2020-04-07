@@ -18,7 +18,7 @@ steps:
           ~/.dotnet/dotnet publish $(System.DefaultWorkingDirectory)/src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
           cd $(System.DefaultWorkingDirectory)/linux
           zip linux.zip *
-          cp $(System.DefaultWorkingDirectory)/linux.zip $(Build.ArtifactStagingDirectory)/linux.zip
+          cp $(System.DefaultWorkingDirectory)/linux/linux.zip $(Build.ArtifactStagingDirectory)/linux.zip
 
   displayName: 'dotnet publish $(buildConfiguration)'
 - task: PublishBuildArtifacts@1

@@ -26,6 +26,6 @@ steps:
     WebAppName: 'aprilbyrd'
     packageForLinux: '$(System.DefaultWorkingDirectory)/linux.zip'
     RuntimeStack: 'DOTNETCORE|Latest'
-    StartupCommand: 'SharpNinja.UI.PersonalCMS.exe'
+    StartupCommand: 'SharpNinja.UI.PersonalCms'
 #    ScriptType: 'Inline Script'
 #    InlineScript: ':: You can provide your deployment commands here. One command per line.'

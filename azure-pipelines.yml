@@ -15,7 +15,7 @@ steps:
           rm /r /f $(System.DefaultWorkingDirectory)/linux
           mkdir $(System.DefaultWorkingDirectory)/linux
           cd $(System.DefaultWorkingDirectory)/linux
-          zip $(System.DefaultWorkingDirectory)/linux.zip *
+          zip linux.zip *
           cp $(System.DefaultWorkingDirectory)/linux.zip $(Build.ArtifactStagingDirectory)/linux.zip
 
   displayName: 'dotnet publish $(buildConfiguration)'

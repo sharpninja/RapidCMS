@@ -22,7 +22,7 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Body-And-Brain-Pay-As-You-Go(45098bff-52b9-40b4-b650-a58322e06a0c)'
     appType: 'webAppLinux'
-    WebAppName: 'april-byrd-web-app'
+    WebAppName: 'aprilbyrd'
     packageForLinux: '$(System.DefaultWorkingDirectory)/linux.zip'
     RuntimeStack: 'DOTNETCORE|Latest'
     StartupCommand: 'SharpNinja.UI.PersonalCMS.exe'

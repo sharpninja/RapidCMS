@@ -10,7 +10,11 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
-- script: dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
+- script: |
+          mkdir $(System.DefaultWorkingDirectory)/linux
+          dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
+          gzip $(System.DefaultWorkingDirectory)/linux.zip $(System.DefaultWorkingDirectory)/linux/*
+          ls -al $(System.DefaultWorkingDirectory)
   displayName: 'dotnet publish $(buildConfiguration)'
 
 - task: AzureRmWebAppDeployment@4
@@ -19,7 +23,7 @@ steps:
     azureSubscription: 'Body-And-Brain-Pay-As-You-Go(45098bff-52b9-40b4-b650-a58322e06a0c)'
     appType: 'webAppLinux'
     WebAppName: 'april-byrd-web-app'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/linux/*.exe'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/linux.zip'
     RuntimeStack: 'DOTNETCORE|Latest'
     StartupCommand: 'SharpNinja.UI.PersonalCMS.exe'
     ScriptType: 'Inline Script'

@@ -26,5 +26,5 @@ steps:
     packageForLinux: '$(System.DefaultWorkingDirectory)/linux.zip'
     RuntimeStack: 'DOTNETCORE|Latest'
     StartupCommand: 'SharpNinja.UI.PersonalCMS.exe'
-    ScriptType: 'Inline Script'
-    InlineScript: ':: You can provide your deployment commands here. One command per line.'
+#    ScriptType: 'Inline Script'
+#    InlineScript: ':: You can provide your deployment commands here. One command per line.'

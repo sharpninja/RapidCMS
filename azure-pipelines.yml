@@ -10,7 +10,7 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
-- script: dotnet publish src/RapidCMS.sln -r linux-x86 --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
+- script: dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
   displayName: 'dotnet publish $(buildConfiguration)'
 
 - task: AzureRmWebAppDeployment@4

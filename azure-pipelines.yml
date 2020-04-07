@@ -10,7 +10,10 @@ variables:
   buildConfiguration: 'Debug'
 
 steps:
+
+
 - script: |
+          curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin -Channel 3.1
           dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
           rm -r ff $(System.DefaultWorkingDirectory)/linux
           mkdir $(System.DefaultWorkingDirectory)/linux

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "resourceId": "/subscriptions/45098bff-52b9-40b4-b650-a58322e06a0c/resourceGroups/april-byrd/providers/Microsoft.KeyVault/vaults/april-key-vault",
+      "type": "secrets.keyVault",
+      "connectionId": "ASPNETCORE_HOSTINGSTARTUP__KEYVAULT__CONFIGURATIONVAULT"
+    },
+    "signalr1": {
+      "resourceId": "/subscriptions/45098bff-52b9-40b4-b650-a58322e06a0c/resourcegroups/april-byrd/providers/Microsoft.SignalRService/SignalR/april-signal-r",
+      "type": "signalr.azure",
+      "connectionId": "Azure__SignalR__ConnectionString",
+      "secretStore": "AzureKeyVault"
+    }
+  }
+}

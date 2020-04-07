@@ -12,7 +12,7 @@ variables:
 steps:
 - script: |
           dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
-          rm /r /f $(System.DefaultWorkingDirectory)/linux
+          rm -r ff $(System.DefaultWorkingDirectory)/linux
           mkdir $(System.DefaultWorkingDirectory)/linux
           cd $(System.DefaultWorkingDirectory)/linux
           zip linux.zip *

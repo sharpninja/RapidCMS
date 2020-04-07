@@ -11,8 +11,9 @@ variables:
 
 steps:
 - script: |
-          mkdir $(System.DefaultWorkingDirectory)/linux
           dotnet publish src/RapidCMS.sln -r "ubuntu.18.04-x64" --self-contained -o $(System.DefaultWorkingDirectory)/linux --configuration $(buildConfiguration)
+          rm /r /f $(System.DefaultWorkingDirectory)/linux
+          mkdir $(System.DefaultWorkingDirectory)/linux
           cd $(System.DefaultWorkingDirectory)/linux
           zip $(System.DefaultWorkingDirectory)/linux.zip *
           cp $(System.DefaultWorkingDirectory)/linux.zip $(Build.ArtifactStagingDirectory)/linux.zip
